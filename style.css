@@ -1,0 +1,269 @@
+/*
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ *
+ * Lara Maia <dev@lara.click> © 2015
+ *
+ */
+
+
+/* Navigation bar */
+
+@keyframes navigationAnim {
+    0% {
+        border-bottom: 3px solid #ffc5ff;
+    }
+    50% {
+        border-bottom: 3px solid white;
+    }
+    100% {
+        border-bottom: 3px solid #ffc5ff;
+    }
+}
+nav {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    animation-name: navigationAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-bottom: 3px solid #ffc5ff;
+    background: #806680;
+}
+nav ul {
+    margin: 3px;
+    color: white;
+}
+nav li {
+    display: inline-table;
+}
+nav a {
+    padding: 7px;
+    color: white;
+    background: #b28fb2;
+    box-shadow: 0 0 4px black;
+}
+nav a:hover {
+    padding-bottom: 50px;
+    background: #c9b1c9;
+    box-shadow: 0 0 2px black;
+}
+nav a:hover + img {
+    visibility: visible;
+}
+nav img {
+    display: block;
+    visibility: hidden;
+    width: 40px;
+    height: 40px;
+    margin: 3px auto;
+}
+
+/* *** *** *** *** *** *** *** */
+
+
+/* Loading animation */
+
+@keyframes crt-on {
+    0% {
+        transform: scale(0, 0.02);
+    }
+    95% {
+        transform: scale(1, 0.02);
+    }
+    99% {
+        transform: scale(1, 1);
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+@keyframes crt-flick {
+    0% {
+        transform: skewX(20deg);
+    }
+    50% {
+        transform: skewY(20deg);
+    }
+    100% {
+        transform: skew(20deg);
+    }
+}
+.loadingAnim {
+    opacity: 0;
+    animation: crt-on 0.5s 0.7s 1 forwards, crt-flick 0.1s 2s 1;
+}
+
+/* *** *** *** *** *** *** *** */
+
+
+/* typewriter animation */
+
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+    49% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+.type {
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto 30px;
+    width: 0;
+    animation: typewriter 7s 1 forwards;
+    animation-delay: 2s;
+}
+.type:after {
+    content: "_";
+    animation: cursor 1.5s infinite;
+}
+
+/* *** *** *** *** *** *** *** */
+
+
+/* General styles */
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #fff;
+}
+body h1 {
+    color: #8D758D;
+    font-family: monospace;
+    font-size: 48px;
+}
+.contents {
+    margin-top: 50px;
+    margin-right: 5%;
+    margin-bottom: 50px;
+    margin-left: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: #FFF5FF;
+    box-shadow: 0 0 9px #fcf;
+}
+.current_directory {
+    width: 74.7%;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-shadow: 0px 0px 1px #FFA0FF;
+}
+
+/* *** *** *** *** *** *** *** */
+
+
+/* Downloads table */
+
+table {
+    width: 75%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+    box-shadow: 0 0 4px black;
+}
+table td {
+    padding: 3px;
+}
+table tr.row.two {
+    background-color: white;
+}
+table tr.row.one {
+    background-color: #fff5ff;
+}
+table tr.row.header {
+    background-color: #b28fb2;
+}
+table tr.row.header a {
+    color: white;
+}
+table tr.row td.icon {
+    width: 25px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+}
+table td.del {
+    width: 25px;
+}
+table tr.row td.size {
+    width: 100px;
+    text-align: right;
+}
+table tr.row td.size.center {
+    text-align: center;
+}
+table tr.row td.changed {
+    width: 150px;
+    text-align: center;
+}
+
+/* *** *** *** *** *** *** *** */
+
+
+/* Projects */
+
+.box {
+    background-color: white;
+    text-align: left;
+    box-shadow: 0 0 3px black;
+    width: 70%;
+    min-height: 65px;
+    margin: 0 auto;
+}
+
+.box .title {
+    padding: 5px;
+    background-color: #b28fb2;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 3px black;
+}
+
+.box .thumbnail {
+    margin: 10px;
+    clear: right;
+    float: right;
+}
+
+.box p {
+    vertical-align: middle;
+}
+
+/* *** *** *** *** *** *** *** */
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+}
+footer p {
+    white-space: pre-line;
+}
+
+/* *** *** *** *** *** *** *** */

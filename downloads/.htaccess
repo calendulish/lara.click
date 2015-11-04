@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} !^downloads\.lara.click$
+RewriteRule (.*) http://downloads.lara.click/$1 [L,R=301]

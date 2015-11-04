@@ -1,0 +1,28 @@
+# Enable php errors
+php_flag display_startup_errors on
+php_flag display_errors on
+php_flag html_errors on
+php_flag log_errors on
+php_value error_reporting -1
+
+ErrorDocument 404 /404.php
+
+RewriteEngine on
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} !^lara.click$
+RewriteRule ^(.*)$ http://lara.click/$1 [L,R=301]
+
+# If the user try access html files, block this.
+<Files ~ "\.html$">
+Order deny,allow
+Deny from all
+</Files>
+
+# If the user try access files with permited extensions, redirect to download
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /downloads/$1 [L,R=301]
+
+# Set default encoding for RIDEEL
+AddCharset windows-1252 .htm
