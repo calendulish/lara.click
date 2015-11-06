@@ -1,3 +1,4 @@
 [submodule "cute-php-explorer"]
 	path = cute-php-explorer
 	url = https://github.com/ShyPixie/cute-php-explorer
+	master = master
