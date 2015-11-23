@@ -61,13 +61,14 @@ nav img {
     margin: 3px auto;
 }
 div.language {
+    display: inline-table;
     position: fixed;
     top: 0;
     right: 0;
     margin: 0 3%;
     background: #b28fb2;
     box-shadow: 0 0 4px black;
-    padding: 6px 16px;
+    padding: 5px;
 }
 div.language a {
     background: none;
@@ -77,7 +78,7 @@ div.language a {
 }
 div.language select {
     display: none;
-    margin-top: 3px;
+    margin-top: 2px;
 }
 div.language:hover select {
     display: inline-table;
@@ -87,81 +88,46 @@ div.language form {
 }
 /* *** *** *** *** *** *** *** */
 
+/* Transition animation */
 
-/* Loading animation */
-
-@keyframes crt-on {
-    0% {
-        transform: scale(0, 0.02);
-    }
-    95% {
-        transform: scale(1, 0.02);
-    }
-    99% {
-        transform: scale(1, 1);
-    }
-    100% {
-        opacity: 1.0;
-    }
-}
-@keyframes crt-flick {
-    0% {
-        transform: skewX(20deg);
-    }
-    50% {
-        transform: skewY(20deg);
-    }
-    100% {
-        transform: skew(20deg);
-    }
-}
-.loadingAnim {
-    opacity: 0;
-    animation: crt-on 0.5s 0.7s 1 forwards, crt-flick 0.1s 2s 1;
-}
-
-/* *** *** *** *** *** *** *** */
-
-
-/* typewriter animation */
-
-@keyframes cursor {
+@keyframes in{
     0% {
         opacity: 0;
-    }
-    49% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
+        transform: translateX(-100%) rotate(-120deg);
     }
     100% {
         opacity: 1;
+        transform: translateX(0px) rotate(0deg);
     }
 }
-@keyframes typewriter {
-    from {
-        width: 0;
+
+@keyframes out{
+    0% {
+        opacity: 1;
+        transform: translateX(0px) rotate(0deg);
     }
-    to {
-        width: 100%;
+    100% {
+        opacity: 0;
+        transform: translateX(100%) rotate(120deg);
     }
 }
-.type {
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 0 auto 30px;
-    width: 0;
-    animation: typewriter 7s 1 forwards;
-    animation-delay: 2s;
+
+.opmax {
+    opacity: 1 !important;
 }
-.type:after {
-    content: "_";
-    animation: cursor 1.5s infinite;
+.opmin {
+    opacity: 0 !important;
+}
+.inAnim {
+    animation: in 0.8s 0.5s 1 forwards;
+    transform-origin: 50% 50%;
+}
+.outAnim {
+    animation: out 0.8s 0.5s 1 forwards;
+    transform-origin: 50% 50%;
 }
 
 /* *** *** *** *** *** *** *** */
-
 
 /* General styles */
 
@@ -187,6 +153,7 @@ body h1 {
     text-align: center;
     background-color: #FFF5FF;
     box-shadow: 0 0 9px #fcf;
+    opacity: 0;
 }
 .current_directory {
     width: 74.7%;

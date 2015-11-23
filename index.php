@@ -43,12 +43,20 @@ if(isset($_GET['page'])) {
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACESfcAnCv8ANOf/wC8cP8A////AOC5/wDJ//8A8Nn/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREREREREREREQzQzMEREREQ3ISUmBEREQ3IFVyMEREQ3IDMwMwREQzMCcnIARERDQCd3J3UERDRAJydzIgREREA3cnI2BEREQDVzMzMERERAUHNmMEREREBQU2YwREREQGUDMwRERERAIgNjBEREREQAQABERERERERERERET//wAA/IcAAPgDAADwAwAA4AMAAMAHAADQAwAAsAMAAPADAADwAwAA8AcAAPAHAADwDwAA8A8AAPkfAAD//wAA" rel="icon" type="image/x-icon" />
+    <script>
+    window.onload = function() {
+        document.getElementById("animation").className = "inAnim contents opmin";
+    }
+    function ani(link) {
+        document.getElementById("animation").className = "outAnim contents opmax";
+        setTimeout(function(){window.location=link;}, 1200)
+    }
+    </script>
 </head>
 
 <body>
 <?php include_once($_SESSION['lang']."/menu.php"); ?>
-<div class="loadingAnim">
-<div class="contents">
+<div id="animation" class="contents">
 <?php include_once($page . ".php") ?>
 </div>
 <footer>

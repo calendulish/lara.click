@@ -1,11 +1,11 @@
     <nav>
         <ul>
             <li class="divider-vertical"></li>
-            <li><a href="?page=home">Início</a><img alt="home" src="icons/home.svg" /></li>
+            <li><a onclick="ani('?page=home')">Início</a><img alt="home" src="icons/home.svg" /></li>
             <li class="divider-vertical"></li>
-            <li><a href="?page=downloads">Arquivos</a><img alt="downloads" src="icons/download.svg" /></li>
+            <li><a onclick="ani('?page=downloads')">Arquivos</a><img alt="downloads" src="icons/download.svg" /></li>
             <li class="divider-vertical"></li>
-            <li><a href="?page=contact">Contato</a><img alt="contact" src="icons/contact.svg" /></li>
+            <li><a onclick="ani('?page=contact')">Contato</a><img alt="contact" src="icons/contact.svg" /></li>
             <li class="divider-vertical"></li>
 
             <div class="language">
