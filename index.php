@@ -5,7 +5,9 @@ $userlang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 if(isset($_POST['lang'])) {
     $_SESSION['lang'] = $_POST['lang'];
 } else {
-    if(!isset($_SESSION['lang'])) {
+    if(isset($_GET['lang'])) {
+        $_SESSION['lang'] = $_GET['lang'];
+    } else if(!isset($_SESSION['lang'])) {
         switch($userlang) {
         case "pt":
             $_SESSION['lang'] = "pt_BR";

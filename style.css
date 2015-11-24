@@ -247,6 +247,41 @@ table tr.row td.changed {
 
 /* *** *** *** *** *** *** *** */
 
+/* BLOG */
+
+.post {
+    width: 95%;
+    margin: 20px auto;
+}
+.post .info {
+    padding: 3px;
+    text-align: left;
+    background: #ddc4dd;
+    box-shadow: 0 0 3px black;
+    width: 170px;
+    white-space: nowrap;
+}
+.post .info p {
+    display: inline;
+}
+.post .title {
+    color: #8D758D;
+    font-family: monospace;
+    font-size: 28px;
+    background: #ffeAff;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 3px black;
+}
+.postcontents {
+    background-color: white;
+    box-shadow: 0 0 3px black;
+    padding-top: 30px;
+}
+.signature {
+    padding: 20px 0 10px 0;
+}
+/* *** *** *** *** *** *** *** */
 
 /* Footer */
 
