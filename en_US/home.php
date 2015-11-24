@@ -1,8 +1,4 @@
             <h1 class="type">My projects</h1>
-            <video height="100" autoplay>
-                <source src="media/intro.mp4" type="video/mp4">
-            </video>
-            <br/>
             <div class="box">
                 <a class="title" href="http://github.com/RaspberryLove">RaspberryLove</a>
                 <a class="thumbnail" href="http://github.com/RaspberryLove">
