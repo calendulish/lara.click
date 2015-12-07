@@ -7,6 +7,8 @@
             <li class="divider-vertical"></li>
             <li><a onclick="ani('?page=contact')">Contact</a><img alt="contact" src="icons/contact.svg" /></li>
             <li class="divider-vertical"></li>
+            <li><a onclick="ani('?page=tecblog')">TecBlog</a><img alt="blog" src="icons/tecblog.svg" /></li>
+            <li class="divider-vertical"></li>
             <li><a onclick="ani('?page=blog')">Blog</a><img alt="blog" src="icons/blog.svg" /></li>
             <li class="divider-vertical"></li>
 
