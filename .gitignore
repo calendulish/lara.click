@@ -1,4 +1,9 @@
 config.php
 mail/
-blog/
-tecblog/
+blog/media
+blog/index.php
+tecblog/media
+tecblog/index.php
+tecblog/*/index.php
+
+
