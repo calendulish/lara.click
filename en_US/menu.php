@@ -1,25 +1,34 @@
-    <nav>
-        <ul>
-            <li class="divider-vertical"></li>
-            <li><a onclick="ani('?page=home')">Home</a><img alt="home" src="icons/home.svg" /></li>
-            <li class="divider-vertical"></li>
-            <li><a onclick="ani('?page=downloads')">Archives</a><img alt="downloads" src="icons/download.svg" /></li>
-            <li class="divider-vertical"></li>
-            <li><a onclick="ani('?page=contact')">Contact</a><img alt="contact" src="icons/contact.svg" /></li>
-            <li class="divider-vertical"></li>
-            <li><a onclick="ani('?page=tecblog')">TecBlog</a><img alt="blog" src="icons/tecblog.svg" /></li>
-            <li class="divider-vertical"></li>
-            <li><a onclick="ani('?page=blog')">Blog</a><img alt="blog" src="icons/blog.svg" /></li>
-            <li class="divider-vertical"></li>
+<nav class='menu'>
+    <ul class='menu'>
+        <li class='menu'>
+            <a class='menu' onclick="ani('?page=home')">Home</a>
+            <img class='menu' alt="home" src="icons/home.svg" />
+        </li>
+        <li class='menu'>
+            <a class='menu' onclick="ani('?page=downloads')">Files</a>
+            <img class='menu' alt="downloads" src="icons/download.svg" />
+        </li>
+        <li class='menu'>
+            <a class='menu' onclick="ani('?page=contact')">Contact</a>
+            <img class='menu' alt="contact" src="icons/contact.svg" />
+        </li>
+        <li class='menu'>
+            <a class='menu' onclick="ani('?page=tecblog')">TecBlog</a>
+            <img class='menu' alt="blog" src="icons/tecblog.svg" />
+        </li>
+        <li class='menu'>
+            <a class='menu' onclick="ani('?page=blog')">Blog</a>
+            <img class='menu' alt="blog" src="icons/blog.svg" />
+        </li>
 
-            <div class="language">
-                <a>Language</a>
-                <form method="post" action="">
-                    <select name="lang" onchange='this.form.submit()'>
-                        <option <?=($_SESSION['lang'] == 'pt_BR')?'selected':''?> value="pt_BR">Portuguese</option>
-                        <option <?=($_SESSION['lang'] == 'en_US')?'selected':''?> value="en_US">English</option>
-                    </select>
-                </form>
-            </div>
-        </ul>
-    </nav>
+        <div class="menulang">
+            <a class='menulang'>Language</a>
+            <form class='menulang' method="post" action="">
+                <select class='menulang' name="lang" onchange='this.form.submit()'>
+                    <option <?=($_SESSION['lang'] == 'pt_BR')?'selected':''?> value="pt_BR">Portuguese</option>
+                    <option <?=($_SESSION['lang'] == 'en_US')?'selected':''?> value="en_US">English</option>
+                </select>
+            </form>
+        </div>
+    </ul>
+</nav>

@@ -46,13 +46,35 @@ if(isset($_GET['page'])) {
     <link href="style.css" rel="stylesheet">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACESfcAnCv8ANOf/wC8cP8A////AOC5/wDJ//8A8Nn/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREREREREREREQzQzMEREREQ3ISUmBEREQ3IFVyMEREQ3IDMwMwREQzMCcnIARERDQCd3J3UERDRAJydzIgREREA3cnI2BEREQDVzMzMERERAUHNmMEREREBQU2YwREREQGUDMwRERERAIgNjBEREREQAQABERERERERERERET//wAA/IcAAPgDAADwAwAA4AMAAMAHAADQAwAAsAMAAPADAADwAwAA8AcAAPAHAADwDwAA8A8AAPkfAAD//wAA" rel="icon" type="image/x-icon" />
     <script>
-    window.onload = function() {
-        document.getElementById("animation").className = "inAnim contents opmin";
-    }
     function ani(link) {
         document.getElementById("animation").className = "outAnim contents opmax";
         setTimeout(function(){window.location=link;}, 1200)
     }
+
+    function changeclass(className, value){
+        e = document.getElementsByClassName(className);
+        while(e.length > 0) e[0].className = value;
+    };
+
+    function check_menu_size() {
+        var width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
+        if(width < 500) {
+            changeclass('menu', 'mobilemenu');
+            changeclass('menulang', 'mobilemenulang');
+        } else {
+            changeclass('mobilemenu', 'menu');
+            changeclass('mobilemenulang', 'menulang');
+        }
+    }
+
+    window.addEventListener('load', function() {
+        check_menu_size();
+        window.addEventListener('resize', check_menu_size);
+        document.getElementById("animation").className = "inAnim contents opmin";
+    });
     </script>
 </head>
 

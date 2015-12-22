@@ -19,7 +19,7 @@
         border-bottom: 3px solid #ffc5ff;
     }
 }
-nav {
+nav.menu {
     position: fixed;
     z-index: 1;
     top: 0;
@@ -31,36 +31,36 @@ nav {
     border-bottom: 3px solid #ffc5ff;
     background: #806680;
 }
-nav ul {
+ul.menu {
     margin: 0;
     color: white;
 }
-nav li {
+li.menu {
     display: inline-table;
     margin-top: 3px;
 }
-nav a {
+a.menu {
     padding: 7px;
     color: white;
     background: #b28fb2;
     box-shadow: 0 0 4px black;
 }
-nav a:hover {
+a.menu:hover {
     padding-bottom: 50px;
     background: #c9b1c9;
     box-shadow: 0 0 2px black;
 }
-nav a:hover + img {
+a.menu:hover + img {
     visibility: visible;
 }
-nav img {
+img.menu {
     display: block;
     visibility: hidden;
     width: 40px;
     height: 40px;
     margin: 3px auto;
 }
-div.language {
+div.menulang {
     display: inline-table;
     position: fixed;
     top: 0;
@@ -70,20 +70,68 @@ div.language {
     box-shadow: 0 0 4px black;
     padding: 5px;
 }
-div.language a {
-    background: none;
-    box-shadow: none;
+a.menulang {
     padding: 0 13px;
     text-align: center;
 }
-div.language select {
+select.menulang {
     display: none;
     margin-top: 2px;
 }
-div.language:hover select {
+div.menulang:hover select.menulang {
     display: inline-table;
 }
-div.language form {
+form.menulang {
+    margin: 0;
+}
+/* *** *** *** *** *** *** *** */
+
+/* Mobile Navigation bar */
+
+nav.mobilemenu {
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 3px solid #ffc5ff;
+    background: #806680;
+}
+ul.mobilemenu {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+li.mobilemenu {
+    display: block;
+    margin: 10px;
+}
+a.mobilemenu {
+    display: block;
+    padding: 7px;
+    color: white;
+    background: #b28fb2;
+    box-shadow: 0 0 4px black;
+}
+a.mobilemenu:hover {
+    background: #c9b1c9;
+    box-shadow: 0 0 2px black;
+}
+img.mobilemenu {
+    display: none;
+}
+div.mobilemenulang {
+    display: block;
+    background: #b28fb2;
+    box-shadow: 0 0 4px black;
+    padding: 7px;
+    margin: 10px;
+}
+select.mobilemenulang {
+    display: none;
+    margin-top: 2px;
+}
+div.mobilemenulang:hover select.mobilemenulang {
+    display: inline-table;
+}
+form.mobilemenulang {
     margin: 0;
 }
 /* *** *** *** *** *** *** *** */
