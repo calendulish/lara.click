@@ -14,5 +14,5 @@
     Veja a Licença Pública Geral GNU para mais detalhes:
     <a href=http://www.gnu.org/licenses/>http://www.gnu.org/licenses/</a>.
 
-    Lara Maia © 2015 <a href="mailto:dev@lara.click">&lt;dev@lara.click&gt;</a>
+    Lara Maia © 2015~2016 <a href="mailto:dev@lara.click">&lt;dev@lara.click&gt;</a>
     GPG Fingerprint: 9626 A58D 0AC4 F421 8F56  E7EA 1D0D 82CC 49BB D383</p>
