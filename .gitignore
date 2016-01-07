@@ -1,9 +1,8 @@
 config.php
 mail/
 blog/media
+blog/comments
 blog/index.php
 tecblog/media
 tecblog/index.php
 tecblog/*/index.php
-
-

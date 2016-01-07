@@ -328,6 +328,61 @@ table tr.row td.changed {
 }
 .signature {
     padding: 20px 0 10px 0;
+    margin: 0;
+}
+
+
+/******* Comments ********/
+
+.commentsForm {
+    background-color: #fdfaff;
+    box-shadow: 0 0 1px black;
+    padding: 0;
+    margin: 0;
+}
+.commentsForm p {
+    text-align: left;
+    padding-top: 10px;
+    margin: 5px;
+}
+.commentsFormAlign {
+    width: 90%;
+    margin: 0 auto;
+}
+.commentsFormName {
+    width: 200px;
+}
+.commentsFormText {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+}
+.commentsFormSubmit {
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+.commentsInfo {
+    padding: 3px;
+    text-align: left;
+    background: #ddc4dd;
+    box-shadow: 0 0 3px black;
+    width: 100%;
+    white-space: nowrap;
+}
+.commentsInfo p {
+    display: inline;
+}
+.commentsText {
+    display: block;
+    background: #fdfaff;
+    margin: 0 0 20px 0 !important;
+    padding: 10px;
+    box-shadow: 0 0 1px black;
+}
+.commentdup {
+    color: red;
+    text-align: center !important;
+    padding-bottom: 5px;
 }
 /* *** *** *** *** *** *** *** */
 
