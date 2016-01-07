@@ -1,6 +1,6 @@
 <h1>Blog da Lara</h1>
 
-<p class="postcontents">Esse é um blog pessoal, não relacionado a programação ou linux<br/>
+<p class="postContents">Esse é um blog pessoal, não relacionado a programação ou linux<br/>
 Se você procura informações técnicas visite o <a href="?page=tecblog">tecblog clicando aqui</a>.
 <br/><br/>
 
@@ -23,17 +23,17 @@ for($i = $posts_per_page*$blogpg-$posts_per_page; $i < $posts_per_page*$blogpg; 
     $file = $files[$i];
     list($date, $title) = explode('_', str_replace('.php', '', $file));
     print("<div class='post'>\n");
-    print('<div class="info"><p>'.$date."</p> por <p>Lara Maia</p></div>\n");
-    print('<h2 class="title">'.$title."</h2>\n");
-    print("<div class='postcontents'>\n");
+    print('<div class="postInfo"><p>'.$date."</p> por <p>Lara Maia</p></div>\n");
+    print('<h2 class="postTitle">'.$title."</h2>\n");
+    print("<div class='postContents'>\n");
     include('blog/'.$file);
-    print("<p class='signature'><i>Lara Maia</i></p>\n</div>\n");
+    print("<p class='postSignature'><i>Lara Maia</i></p>\n</div>\n");
 ?>
 <div class="commentsForm">
     <form class="commentsFormAlign" action="" method="POST">
-        <p>Nome: <input id='focus' class="commentsFormName" type="text" name="name" required>
+        <p class="commentsFormName">Nome: <input id='focus' type="text" name="name" required></p>
         <textarea class="commentsFormText" name="message" rows="6" cols="40"
-        placeholder="Escreva seu comentário aqui." required></textarea></p>
+        placeholder="Escreva seu comentário aqui." required></textarea>
         <input class="commentsFormSubmit" type="submit" name="comment" value="Enviar">
     </form>
 <?php

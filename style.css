@@ -28,7 +28,6 @@ nav.menu {
     animation-name: navigationAnim;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    border-bottom: 3px solid #ffc5ff;
     background: #806680;
 }
 ul.menu {
@@ -160,12 +159,6 @@ form.mobilemenulang {
     }
 }
 
-.opmax {
-    opacity: 1 !important;
-}
-.opmin {
-    opacity: 0 !important;
-}
 .inAnim {
     animation: in 0.8s 0.5s 1 forwards;
     transform-origin: 50% 50%;
@@ -186,16 +179,13 @@ body {
     margin: 0;
     background-color: #fff;
 }
-body h1 {
+h1 {
     color: #8D758D;
     font-family: monospace;
     font-size: 48px;
 }
 .contents {
-    margin-top: 50px;
-    margin-right: 5%;
-    margin-bottom: 50px;
-    margin-left: 5%;
+    margin: 50px 5%;
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
@@ -210,7 +200,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    text-shadow: 0px 0px 1px #FFA0FF;
+    text-shadow: 0 0 1px #FFA0FF;
 }
 
 /* *** *** *** *** *** *** *** */
@@ -219,46 +209,8 @@ a:hover {
 /* Downloads table */
 
 table {
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
-    border-collapse: collapse;
-    border-spacing: 0;
-    text-align: left;
-    box-shadow: 0 0 4px black;
-}
-table td {
-    padding: 3px;
-}
-table tr.row.two {
-    background-color: white;
-}
-table tr.row.one {
-    background-color: #fff5ff;
-}
-table tr.row.header {
-    background-color: #b28fb2;
-}
-table tr.row.header a {
-    color: white;
-}
-table tr.row td.icon {
-    width: 25px;
-    padding-top: 3px;
-    padding-bottom: 1px;
-}
-table td.del {
-    width: 25px;
-}
-table tr.row td.size {
-    width: 100px;
-    text-align: right;
-}
-table tr.row td.size.center {
-    text-align: center;
-}
-table tr.row td.changed {
-    width: 150px;
-    text-align: center;
 }
 
 /* *** *** *** *** *** *** *** */
@@ -301,18 +253,19 @@ table tr.row td.changed {
     width: 95%;
     margin: 20px auto;
 }
-.post .info {
-    padding: 3px;
+.postInfo {
     text-align: left;
     background: #ddc4dd;
     box-shadow: 0 0 3px black;
-    width: 170px;
+    width: 180px;
     white-space: nowrap;
 }
-.post .info p {
+.postInfo p {
     display: inline;
+    line-height: 25px;
+    padding: 0 3px;
 }
-.post .title {
+.postTitle {
     color: #8D758D;
     font-family: monospace;
     font-size: 28px;
@@ -321,12 +274,12 @@ table tr.row td.changed {
     padding: 0;
     box-shadow: 0 0 3px black;
 }
-.postcontents {
+.postContents {
     background-color: white;
     box-shadow: 0 0 3px black;
     padding-top: 30px;
 }
-.signature {
+.postSignature {
     padding: 20px 0 10px 0;
     margin: 0;
 }
@@ -340,16 +293,16 @@ table tr.row td.changed {
     padding: 0;
     margin: 0;
 }
-.commentsForm p {
-    text-align: left;
-    padding-top: 10px;
-    margin: 5px;
-}
 .commentsFormAlign {
     width: 90%;
     margin: 0 auto;
 }
 .commentsFormName {
+    text-align: left;
+    padding-top: 10px;
+    margin: 5px;
+}
+.commentsFormName input {
     width: 200px;
 }
 .commentsFormText {
@@ -362,7 +315,6 @@ table tr.row td.changed {
     padding: 0 20px;
 }
 .commentsInfo {
-    padding: 3px;
     text-align: left;
     background: #ddc4dd;
     box-shadow: 0 0 3px black;
@@ -371,17 +323,19 @@ table tr.row td.changed {
 }
 .commentsInfo p {
     display: inline;
+    line-height: 25px;
+    padding: 0 3px;
 }
 .commentsText {
     display: block;
     background: #fdfaff;
-    margin: 0 0 20px 0 !important;
+    margin: 0 0 20px 0;
     padding: 10px;
     box-shadow: 0 0 1px black;
 }
 .commentdup {
     color: red;
-    text-align: center !important;
+    text-align: center;
     padding-bottom: 5px;
 }
 /* *** *** *** *** *** *** *** */

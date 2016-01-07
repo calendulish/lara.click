@@ -47,7 +47,9 @@ if(isset($_GET['page'])) {
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACESfcAnCv8ANOf/wC8cP8A////AOC5/wDJ//8A8Nn/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREREREREREREQzQzMEREREQ3ISUmBEREQ3IFVyMEREQ3IDMwMwREQzMCcnIARERDQCd3J3UERDRAJydzIgREREA3cnI2BEREQDVzMzMERERAUHNmMEREREBQU2YwREREQGUDMwRERERAIgNjBEREREQAQABERERERERERERET//wAA/IcAAPgDAADwAwAA4AMAAMAHAADQAwAAsAMAAPADAADwAwAA8AcAAPAHAADwDwAA8A8AAPkfAAD//wAA" rel="icon" type="image/x-icon" />
     <script>
     function ani(link) {
-        document.getElementById("animation").className = "outAnim contents opmax";
+        aniElement = document.getElementById("animation")
+        aniElement.style.opacity = "1";
+        aniElement.className = "outAnim contents";
         setTimeout(function(){window.location=link;}, 1200)
     }
 
@@ -73,7 +75,9 @@ if(isset($_GET['page'])) {
     window.addEventListener('load', function() {
         check_menu_size();
         window.addEventListener('resize', check_menu_size);
-        document.getElementById("animation").className = "inAnim contents opmin";
+        aniElement = document.getElementById("animation")
+        aniElement.style.opacity = "0";
+        aniElement.className = "inAnim contents";
     });
     </script>
 </head>
