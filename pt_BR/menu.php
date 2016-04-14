@@ -16,10 +16,6 @@
                 <a class='menu' onclick="ani('?page=tecblog')">TecBlog</a>
                 <img class='menu' alt="blog" src="icons/tecblog.svg" />
             </li>
-            <li class='menu'>
-                <a class='menu' onclick="ani('?page=blog')">Blog</a>
-                <img class='menu' alt="blog" src="icons/blog.svg" />
-            </li>
 
             <div class="menulang">
                 <a class='menulang'>Idioma</a>
