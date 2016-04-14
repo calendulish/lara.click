@@ -1,0 +1,307 @@
+<img alt="Diagrama de pinos do Rpi" src="raspberrypi/media/pinout.png"/>
+
+<h2>Mapeamento de pinos normais (Para todos os RaspberryPi)</h2>
+
+<table>
+<tr>
+    <th>Físico</th>
+    <th>Nome</th>
+    <th>BCM Rv1</th>
+    <th>BCM Rv2</th>
+    <th>WiringPi</th>
+</tr>
+<tr>
+    <td>1</td>
+    <td>3.3v</td>
+    <td>3.3v</td>
+    <td>3.3v</td>
+    <td>3.3v</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>5v</td>
+    <td>5v</td>
+    <td>5v</td>
+    <td>5v</td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>SDA1</td>
+    <td>0</td>
+    <td>2</td>
+    <td>8</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>5v</td>
+    <td>5v</td>
+    <td>5v</td>
+    <td>5v</td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>SCL1</td>
+    <td>1</td>
+    <td>3</td>
+    <td>9</td>
+</tr>
+<tr>
+    <td>6</td>
+    <td>GND</td>
+    <td>GND</td>
+    <td>GND</td>
+    <td>GND</td>
+</tr>
+<tr>
+    <td>7</td>
+    <td>GPIO7</td>
+    <td>4</td>
+    <td>4</td>
+    <td>7</td>
+</tr>
+<tr>
+    <td>8</td>
+    <td>TxD</td>
+    <td>14</td>
+    <td>14</td>
+    <td>15</td>
+</tr>
+<tr>
+    <td>9</td>
+    <td>GND</td>
+    <td>GND</td>
+    <td>GND</td>
+    <td>GND</td>
+</tr>
+<tr>
+    <td>10</td>
+    <td>RxD</td>
+    <td>15</td>
+    <td>15</td>
+    <td>16</td>
+</tr>
+<tr>
+    <td>11</td>
+    <td>GPIO0</td>
+    <td>17</td>
+    <td>17</td>
+    <td>0</td>
+</tr>
+<tr>
+    <td>12</td>
+    <td>GPIO1</td>
+    <td>18</td>
+    <td>18</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>13</td>
+    <td>GPIO2</td>
+    <td>21</td>
+    <td>27</td>
+    <td>2</td>
+</tr>
+<tr>
+    <td>14</td>
+    <td>GND</td>
+    <td>GND</td>
+    <td>GND</td>
+    <td>GND</td>
+</tr>
+<tr>
+    <td>15</td>
+    <td>GPIO3</td>
+    <td>22</td>
+    <td>22</td>
+    <td>3</td>
+</tr>
+<tr>
+    <td>16</td>
+    <td>GPIO4</td>
+    <td>23</td>
+    <td>23</td>
+    <td>4</td>
+</tr>
+<tr>
+    <td>17</td>
+    <td>3.3V</td>
+    <td>3.3V</td>
+    <td>3.3V</td>
+    <td>3.3V</td>
+</tr>
+<tr>
+    <td>18</td>
+    <td>GPIO5</td>
+    <td>24</td>
+    <td>24</td>
+    <td>5</td>
+</tr>
+<tr>
+    <td>19</td>
+    <td>MOSI</td>
+    <td>10</td>
+    <td>10</td>
+    <td>12</td>
+</tr>
+<tr>
+    <td>20</td>
+    <td>GND</td>
+    <td>GND</td>
+    <td>GND</td>
+    <td>GND</td>
+</tr>
+<tr>
+    <td>21</td>
+    <td>MISO</td>
+    <td>9</td>
+    <td>9</td>
+    <td>13</td>
+</tr>
+<tr>
+    <td>22</td>
+    <td>GPIO6</td>
+    <td>25</td>
+    <td>25</td>
+    <td>6</td>
+</tr>
+<tr>
+    <td>23</td>
+    <td>SCLK</td>
+    <td>11</td>
+    <td>11</td>
+    <td>14</td>
+</tr>
+<tr>
+    <td>24</td>
+    <td>CE0</td>
+    <td>8</td>
+    <td>8</td>
+    <td>10</td>
+</tr>
+<tr>
+    <td>25</td>
+    <td>GND</td>
+    <td>GND</td>
+    <td>GND</td>
+    <td>GND</td>
+</tr>
+<tr>
+    <td>26</td>
+    <td>CE1</td>
+    <td>7</td>
+    <td>7</td>
+    <td>11</td>
+</tr>
+</table>
+
+<img alt="Diagrama de pinos extras do Rpi" src="raspberrypi/media/pinout_extra.png"/>
+
+<h2>Mapeamento de pinos extras (Para RaspberryPi 2 e 3)</h2>
+
+<table>
+<tr>
+    <th>Físico</th>
+    <th>Nome</th>
+    <th>BCM Rv1</th>
+    <th>BCM Rv2</th>
+    <th>WiringPi</th>
+</tr>
+<tr>
+    <td>27</td>
+    <td>SDA0</td>
+    <td>N/A</td>
+    <td>0</td>
+    <td>30</td>
+</tr>
+<tr>
+    <td>28</td>
+    <td>SCL0</td>
+    <td>N/A</td>
+    <td>1</td>
+    <td>31</td>
+</tr>
+<tr>
+    <td>29</td>
+    <td>GPIO21</td>
+    <td>N/A</td>
+    <td>5</td>
+    <td>21</td>
+</tr>
+<tr>
+    <td>30</td>
+    <td>GND</td>
+    <td>N/A</td>
+    <td>GND</td>
+    <td>GND</td>
+</tr>
+<tr>
+    <td>31</td>
+    <td>GPIO22</td>
+    <td>N/A</td>
+    <td>6</td>
+    <td>22</td>
+</tr>
+<tr>
+    <td>32</td>
+    <td>GPIO26</td>
+    <td>N/A</td>
+    <td>12</td>
+    <td>26</td>
+</tr>
+<tr>
+    <td>33</td>
+    <td>GPIO23</td>
+    <td>N/A</td>
+    <td>13</td>
+    <td>23</td>
+</tr>
+<tr>
+    <td>34</td>
+    <td>GND</td>
+    <td>N/A</td>
+    <td>GND</td>
+    <td>GND</td>
+</tr>
+<tr>
+    <td>35</td>
+    <td>GPIO24</td>
+    <td>N/A</td>
+    <td>19</td>
+    <td>24</td>
+</tr>
+<tr>
+    <td>36</td>
+    <td>GPIO27</td>
+    <td>N/A</td>
+    <td>16</td>
+    <td>27</td>
+</tr>
+<tr>
+    <td>37</td>
+    <td>GPIO25</td>
+    <td>N/A</td>
+    <td>26</td>
+    <td>25</td>
+</tr>
+<tr>
+    <td>38</td>
+    <td>GPIO28</td>
+    <td>N/A</td>
+    <td>20</td>
+    <td>28</td>
+</tr>
+<tr>
+    <td>39</td>
+    <td>GND</td>
+    <td>N/A</td>
+    <td>GND</td>
+    <td>GND</td>
+</tr>
+<tr>
+    <td>40</td>
+    <td>GPIO29</td>
+    <td>N/A</td>
+    <td>21</td>
+    <td>29</td>
+</tr>
+</table>

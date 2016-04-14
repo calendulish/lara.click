@@ -9,6 +9,10 @@
             <img class='menu' alt="downloads" src="icons/download.svg" />
         </li>
         <li class='menu'>
+            <a class='menu' onclick="ani('?page=raspberrypi')">RaspberryPi</a>
+            <img class='menu' alt="raspberrypi" src="icons/raspberrypi.svg" />
+        </li>
+        <li class='menu'>
             <a class='menu' onclick="ani('?page=contact')">Contact</a>
             <img class='menu' alt="contact" src="icons/contact.svg" />
         </li>
