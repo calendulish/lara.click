@@ -1,10 +1,10 @@
-<div class="titleImage">
+<div class="pageTitleImage">
     <img alt="RaspberryPi" src="raspberrypi/media/raspberrypi.gif"/>
 </div>
 
-<h1 class="title">RaspberryPi</h1>
+<h1 class="pageTitle">RaspberryPi</h1>
 
-<h3 class="subtitle">Você não sabe o que é um RaspberryPi?
+<h3 class="pageSubTitle">Você não sabe o que é um RaspberryPi?
     <a href=https://player.vimeo.com/video/90103691?autoplay=1 target="_blank">Clique aqui</a>
 </h3>
 

@@ -243,7 +243,7 @@ table {
 
 /*** Blog-style Page ***/
 
-.titleImage {
+.pageTitleImage {
     padding: 0;
     position: fixed;
     margin-left: 3%;
@@ -251,7 +251,7 @@ table {
     height: 5%;
 }
 
-.title, .subtitle {
+.pageTitle, .pageSubTitle {
     margin-left: 20%;
 }
 
