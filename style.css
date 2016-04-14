@@ -140,32 +140,26 @@ form.mobilemenulang {
 @keyframes in{
     0% {
         opacity: 0;
-        transform: translateX(-100%) rotate(-120deg);
     }
     100% {
         opacity: 1;
-        transform: translateX(0px) rotate(0deg);
     }
 }
 
 @keyframes out{
     0% {
         opacity: 1;
-        transform: translateX(0px) rotate(0deg);
     }
     100% {
         opacity: 0;
-        transform: translateX(100%) rotate(120deg);
     }
 }
 
 .inAnim {
-    animation: in 0.8s 0.5s 1 forwards;
-    transform-origin: 50% 50%;
+    animation: in 0.5s cubic-bezier(1, 0, 0, 1) 1 forwards;
 }
 .outAnim {
-    animation: out 0.8s 0.5s 1 forwards;
-    transform-origin: 50% 50%;
+    animation: out 0.5s cubic-bezier(1, 0, 0, 1) 1 forwards;
 }
 
 /* *** *** *** *** *** *** *** */
