@@ -59,29 +59,33 @@ img.menu {
     height: 40px;
     margin: 3px auto;
 }
-div.menulang {
+
+li.menuright {
+    float: right;
     display: inline-table;
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 0 3%;
+    margin-top: 3px;
+    padding-right: 30px;
+}
+a.menuright {
+    padding: 6px 20px;
+    color: white;
     background: #b28fb2;
     box-shadow: 0 0 4px black;
-    padding: 5px;
 }
-a.menulang {
-    padding: 0 13px;
-    text-align: center;
+
+li.menuright:hover form.langForm {
+    display: block;
 }
-select.menulang {
-    display: none;
+
+select.langForm {
     margin-top: 2px;
 }
-div.menulang:hover select.menulang {
-    display: inline-table;
-}
-form.menulang {
-    margin: 0;
+form.langForm {
+    display: none;
+    margin-top: 10px;
+    padding: 7px;
+    background: #b28fb2;
+    box-shadow: 0 0 4px black;
 }
 /* *** *** *** *** *** *** *** */
 

@@ -16,15 +16,14 @@
                 <a class='menu' onclick="ani('?page=contact')">Contato</a>
                 <img class='menu' alt="contact" src="icons/contact.svg" />
             </li>
-
-            <div class="menulang">
-                <a class='menulang'>Idioma</a>
-                <form class='menulang' method="post" action="">
-                    <select class='menulang' name="lang" onchange='this.form.submit()'>
-                        <option <?=($_SESSION['lang'] == 'pt_BR')?'selected':''?> value="pt_BR">Português</option>
-                        <option <?=($_SESSION['lang'] == 'en_US')?'selected':''?> value="en_US">Inglês</option>
+            <li class='menuright'>
+                <a class='menuright'>Language</a>
+                <form class='langForm' method="post" action="">
+                    <select class='langForm' name="lang" onchange='this.form.submit()'>
+                        <option <?=($_SESSION['lang'] == 'pt_BR')?'selected':''?> value="pt_BR">Portuguese</option>
+                        <option <?=($_SESSION['lang'] == 'en_US')?'selected':''?> value="en_US">English</option>
                     </select>
                 </form>
-            </div>
+            </li>
         </ul>
     </nav>
