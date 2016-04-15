@@ -65,10 +65,22 @@ if(isset($_GET['page'])) {
 
         if(width < 500) {
             changeclass('menu', 'mobilemenu');
-            changeclass('menulang', 'mobilemenulang');
+            changeclass('menuright', 'mobilemenuright');
+            changeclass('langForm', 'mobilelangForm');
+            changeclass('pageTitleImage', 'mobilepageTitleImage');
+            changeclass('pageTitle', 'mobilepageTitle');
+            changeclass('pageSubTitle', 'mobilepageSubTitle');
+            changeclass('postMenu', 'mobilepostMenu');
+            changeclass('post', 'mobilepost');
         } else {
             changeclass('mobilemenu', 'menu');
-            changeclass('mobilemenulang', 'menulang');
+            changeclass('mobilemenuright', 'menuright');
+            changeclass('mobilelangForm', 'langForm');
+            changeclass('mobilepageTitleImage', 'pageTitleImage');
+            changeclass('mobilepageTitle', 'pageTitle');
+            changeclass('mobilepageSubTitle', 'pageSubTitle');
+            changeclass('mobilepostMenu', 'postMenu');
+            changeclass('mobilepost', 'post');
         }
     }
 

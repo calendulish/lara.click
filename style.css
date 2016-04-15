@@ -97,6 +97,7 @@ nav.mobilemenu {
     border-bottom: 3px solid #ffc5ff;
     background: #806680;
 }
+
 ul.mobilemenu {
     margin: 0;
     padding: 0;
@@ -120,22 +121,29 @@ a.mobilemenu:hover {
 img.mobilemenu {
     display: none;
 }
-div.mobilemenulang {
+li.mobilemenuright {
     display: block;
-    background: #b28fb2;
-    box-shadow: 0 0 4px black;
-    padding: 7px;
     margin: 10px;
 }
-select.mobilemenulang {
-    display: none;
+a.mobilemenuright {
+    display: block;
+    padding: 7px;
+    color: white;
+    background: #b28fb2;
+    box-shadow: 0 0 4px black;
+}
+li.mobilemenuright:hover form.mobilelangForm {
+    display: block;
+}
+select.mobilelangForm {
     margin-top: 2px;
 }
-div.mobilemenulang:hover select.mobilemenulang {
-    display: inline-table;
-}
-form.mobilemenulang {
-    margin: 0;
+form.mobilelangForm {
+    display: none;
+    margin-top: 10px;
+    padding: 7px;
+    background: #b28fb2;
+    box-shadow: 0 0 4px black;
 }
 
 /* *** *** *** *** *** *** *** */
@@ -247,6 +255,7 @@ table {
 /*** Blog-style Page ***/
 
 .pageTitleImage {
+    display: block;
     padding: 0;
     position: fixed;
     margin-left: 3%;
@@ -255,6 +264,13 @@ table {
 }
 .pageTitle, .pageSubTitle {
     margin-left: 20%;
+}
+
+.mobilepageTitleImage {
+    display: none;
+}
+.mobilepageTitle, .mobilepageSubTitle {
+    margin-left: 0;
 }
 
 /* Vertical Menu */
@@ -295,6 +311,16 @@ table {
     color: black;
 }
 
+/* Mobile Vertical Menu */
+
+.mobilepostMenu {
+    list-style-type: none;
+    padding: 0 0 5px 0;
+    margin: 0 auto 15px auto;
+    width: 80%;
+    position: inherit;
+    box-shadow: 0 0 3px black;
+}
 /* *** *** *** *** *** */
 
 .post {
@@ -345,7 +371,10 @@ table {
     border: 1px solid #ccc;
     padding: 10px;
 }
-
+.mobilepost {
+    margin-left: 0;
+    padding: 1px 16px;
+}
 /* *** *** *** *** *** *** *** *** */
 
 
