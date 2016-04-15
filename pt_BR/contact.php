@@ -12,7 +12,7 @@ if(isset($_POST['contact'])) {
 } else {
 ?>
 
-<form action="" method="POST">
+<form method="POST">
     <p>Nome: <input type="text" name="name" required></p>
     <p>Email: &nbsp;<input type="email" name="email" required></p>
     <p>Mensagem: </p>

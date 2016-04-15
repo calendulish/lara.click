@@ -7,7 +7,7 @@ if(isset($_POST['lang'])) {
 } else {
     if(isset($_GET['lang'])) {
         $_SESSION['lang'] = $_GET['lang'];
-    } else if(!isset($_SESSION['lang'])) {
+    } elseif(!isset($_SESSION['lang'])) {
         switch($userlang) {
         case "pt":
             $_SESSION['lang'] = "pt_BR";
@@ -36,12 +36,12 @@ if(isset($_GET['page'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en_US">
+<html lang="en">
 <head>
-    <?php if($page == $_SESSION['lang']."/downloads") { include_once("cute-php-explorer/head.php"); } ?>
     <title>lara.click - HOME</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <?php if($page == $_SESSION['lang']."/downloads") { include_once("cute-php-explorer/head.php"); } ?>
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACESfcAnCv8ANOf/wC8cP8A////AOC5/wDJ//8A8Nn/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREREREREREREQzQzMEREREQ3ISUmBEREQ3IFVyMEREQ3IDMwMwREQzMCcnIARERDQCd3J3UERDRAJydzIgREREA3cnI2BEREQDVzMzMERERAUHNmMEREREBQU2YwREREQGUDMwRERERAIgNjBEREREQAQABERERERERERERET//wAA/IcAAPgDAADwAwAA4AMAAMAHAADQAwAAsAMAAPADAADwAwAA8AcAAPAHAADwDwAA8A8AAPkfAAD//wAA" rel="icon" type="image/x-icon" />
@@ -90,6 +90,5 @@ if(isset($_GET['page'])) {
 <footer>
 <?php include_once($_SESSION['lang']."/footer.php"); ?>
 </footer>
-</div>
 </body>
 </html>

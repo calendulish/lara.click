@@ -18,7 +18,7 @@
         </li>
         <li class='menuright'>
             <a class='menuright'>Language</a>
-            <form class='langForm' method="post" action="">
+            <form class='langForm' method="post">
                 <select class='langForm' name="lang" onchange='this.form.submit()'>
                     <option <?=($_SESSION['lang'] == 'pt_BR')?'selected':''?> value="pt_BR">Portuguese</option>
                     <option <?=($_SESSION['lang'] == 'en_US')?'selected':''?> value="en_US">English</option>

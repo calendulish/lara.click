@@ -5,7 +5,7 @@
 <h1 class="pageTitle">RaspberryPi</h1>
 
 <h3 class="pageSubTitle">Você não sabe o que é um RaspberryPi?
-    <a href=https://player.vimeo.com/video/90103691?autoplay=1 target="_blank">Clique aqui</a>
+    <a href="https://player.vimeo.com/video/90103691?autoplay=1" target="_blank">Clique aqui</a>
 </h3>
 
 <?php

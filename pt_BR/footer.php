@@ -1,9 +1,9 @@
     <a rel="license" href="LICENSE.txt">
-        <img alt="GNU General Public License" src="icons/gplv3.svg" width="150" height="auto" />
+        <img alt="GNU General Public License" src="icons/gplv3.svg" width="150"/>
     </a>
     <br/>
     <a href="https://github.com/ShyPixie">
-        <img alt="Built with love" src="icons/built_with_love.svg" width="150" height="auto"/>
+        <img alt="Built with love" src="icons/built_with_love.svg" width="150"/>
     </a>
 
     <p>O website lara.click é um software livre; você pode redistribuí-lo e/ou
