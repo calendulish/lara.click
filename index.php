@@ -50,7 +50,7 @@ if(isset($_GET['page'])) {
         aniElement = document.getElementById("animation")
         aniElement.style.opacity = "1";
         aniElement.className = "outAnim contents";
-        setTimeout(function(){window.location=link;}, 1200)
+        setTimeout(function(){window.location=link;}, 500)
     }
 
     function changeclass(className, value){
