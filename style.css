@@ -200,6 +200,10 @@ h1 {
     box-shadow: 0 0 9px #fcf;
     opacity: 0;
 }
+.current_directory {
+    width: 84.33%;
+    margin: 0 auto;
+}
 a {
     text-decoration: none;
 }
