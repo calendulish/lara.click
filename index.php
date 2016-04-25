@@ -87,6 +87,10 @@ if(isset($_GET['page'])) {
     window.addEventListener('load', function() {
         check_menu_size();
         window.addEventListener('resize', check_menu_size);
+
+        menuElement = document.getElementById("menu")
+        menuElement.style.opacity = "1";
+
         aniElement = document.getElementById("animation")
         aniElement.style.opacity = "0";
         aniElement.className = "inAnim contents";

@@ -1,4 +1,4 @@
-    <nav class='menu'>
+    <nav class='menu' id='menu'>
         <ul class='menu'>
             <li class='menu'>
                 <a class='menu' onclick="ani('?page=home')">Início</a>

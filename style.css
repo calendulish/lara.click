@@ -30,6 +30,7 @@ nav.menu {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     background: #806680;
+    opacity: 0;
 }
 ul.menu {
     margin: 0;
@@ -96,6 +97,7 @@ nav.mobilemenu {
     width: 100%;
     border-bottom: 3px solid #ffc5ff;
     background: #806680;
+    opacity: 0;
 }
 
 ul.mobilemenu {
