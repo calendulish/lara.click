@@ -181,12 +181,55 @@ form.mobilelangForm {
 
 /* General styles */
 
+@keyframes mouseAnim {
+    0% {
+        cursor: url(normal_select/normal_select1.png), auto;
+    }
+    3% {
+        cursor: url(normal_select/normal_select2.png), auto;
+    }
+    6% {
+        cursor: url(normal_select/normal_select3.png), auto;
+    }
+    9% {
+        cursor: url(normal_select/normal_select4.png), auto;
+    }
+    12% {
+        cursor: url(normal_select/normal_select5.png), auto;
+    }
+    15% {
+        cursor: url(normal_select/normal_select6.png), auto;
+    }
+    18% {
+        cursor: url(normal_select/normal_select5.png), auto;
+    }
+    21% {
+        cursor: url(normal_select/normal_select4.png), auto;
+    }
+    24% {
+        cursor: url(normal_select/normal_select3.png), auto;
+    }
+    27% {
+        cursor: url(normal_select/normal_select2.png), auto;
+    }
+    30% {
+        cursor: url(normal_select/normal_select1.png), auto;
+    }
+    100% {
+        cursor: url(normal_select/normal_select1.png), auto;
+    }
+}
+
 body {
+    cursor: url(normal_select/normal_select1.png), auto;
     font-family: 'Josefin Sans', sans-serif;
     height: 100%;
     width: 100%;
     margin: 0;
     background-color: #fff;
+    animation-name: mouseAnim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 h1 {
     color: #8D758D;
