@@ -63,7 +63,7 @@ if(isset($_GET['page'])) {
         || document.documentElement.clientWidth
         || document.body.clientWidth;
 
-        if(width < 500) {
+        if(width < 600) {
             changeclass('menu', 'mobilemenu');
             changeclass('menuright', 'mobilemenuright');
             changeclass('langForm', 'mobilelangForm');

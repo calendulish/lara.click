@@ -200,24 +200,16 @@ h1 {
     box-shadow: 0 0 9px #fcf;
     opacity: 0;
 }
-.current_directory {
-    width: 74.7%;
-}
 a {
     text-decoration: none;
 }
 a:hover {
     text-shadow: 0 0 1px #FFA0FF;
 }
-
-/* *** *** *** *** *** *** *** */
-
-
-/* Downloads table */
-
 table {
     width: 85%;
     margin: 0 auto;
+    word-break: break-all;
 }
 
 /* *** *** *** *** *** *** *** */
@@ -317,7 +309,6 @@ table {
     list-style-type: none;
     padding: 0 0 5px 0;
     margin: 0 auto 15px auto;
-    width: 80%;
     position: inherit;
     box-shadow: 0 0 3px black;
 }
@@ -360,6 +351,7 @@ table {
 .postContents p {
     padding: 0;
     margin: 0;
+    white-space: pre-line;
 }
 .postContents img {
     max-width: 100%;
