@@ -22,7 +22,7 @@ if(isset($_POST['lang'])) {
 if(isset($_GET['page'])) {
     if(file_exists($_SESSION['lang'].'/'.$_GET['page'].'.php')) {
         if($_GET['page'] == "downloads") {
-            require_once($_SESSION['lang']."/config.php");
+            require_once("config.php");
             require_once("cute-php-explorer/init.php");
         }
         $page = $_SESSION['lang'].'/'.$_GET['page'];
