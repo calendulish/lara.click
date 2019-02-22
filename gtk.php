@@ -137,7 +137,7 @@ class Window extends Widget {
         $this->extra .= $widget->get_html();
     }
     
-    public function set_contents($contents_file, $env) {
+    public function set_contents($contents_file, $env = null) {
         $this->env = $env;
         $this->contents_file = $contents_file;
     }
