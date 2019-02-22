@@ -151,12 +151,16 @@ class Window extends Widget {
         parent::show();
         print($this->extra);
 
-        while($object = current($this->env)) {
-            ${key($this->env)} = $object;
-            next($this->env);
+        if(!empty($this->env)) {
+            while($object = current($this->env)) {
+                ${key($this->env)} = $object;
+                next($this->env);
+            }
         }
 
-        include_once($this->contents_file);
+        if(!empty($this->contents_file)) {
+            include_once($this->contents_file);
+        }
         print("</div>\n");
     }
 }
