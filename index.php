@@ -46,53 +46,8 @@ if(isset($_GET['page'])) {
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACESfcAnCv8ANOf/wC8cP8A////AOC5/wDJ//8A8Nn/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREREREREREREQzQzMEREREQ3ISUmBEREQ3IFVyMEREQ3IDMwMwREQzMCcnIARERDQCd3J3UERDRAJydzIgREREA3cnI2BEREQDVzMzMERERAUHNmMEREREBQU2YwREREQGUDMwRERERAIgNjBEREREQAQABERERERERERERET//wAA/IcAAPgDAADwAwAA4AMAAMAHAADQAwAAsAMAAPADAADwAwAA8AcAAPAHAADwDwAA8A8AAPkfAAD//wAA" rel="icon" type="image/x-icon" />
-    <script>
-    function changeclass(className, value){
-        e = document.getElementsByClassName(className);
-        while(e.length > 0) e[0].className = value;
-    };
-
-    function check_menu_size() {
-        var width = window.innerWidth
-        || document.documentElement.clientWidth
-        || document.body.clientWidth;
-
-        if(width < 600) {
-            changeclass('menu', 'mobilemenu');
-            changeclass('menuright', 'mobilemenuright');
-            changeclass('langForm', 'mobilelangForm');
-            changeclass('pageTitleImage', 'mobilepageTitleImage');
-            changeclass('pageTitle', 'mobilepageTitle');
-            changeclass('pageSubTitle', 'mobilepageSubTitle');
-            changeclass('postMenu', 'mobilepostMenu');
-            changeclass('post', 'mobilepost');
-        } else {
-            changeclass('mobilemenu', 'menu');
-            changeclass('mobilemenuright', 'menuright');
-            changeclass('mobilelangForm', 'langForm');
-            changeclass('mobilepageTitleImage', 'pageTitleImage');
-            changeclass('mobilepageTitle', 'pageTitle');
-            changeclass('mobilepageSubTitle', 'pageSubTitle');
-            changeclass('mobilepostMenu', 'postMenu');
-            changeclass('mobilepost', 'post');
-        }
-    }
-
-    window.addEventListener('load', function() {
-        check_menu_size();
-        window.addEventListener('resize', check_menu_size);
-    });
-    </script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-65630368-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
+    <script src="scripts/analytics.js"></script>
+    <script src="scripts/mobile_resize.js"></script>
 </head>
 
 <body>
