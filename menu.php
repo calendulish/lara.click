@@ -1,29 +1,20 @@
-<nav class='menu' id='menu'>
-    <ul class='menu'>
-        <li class='menu'>
-            <a class='menu' onclick="ani('?page=home')">Home</a>
-            <img class='menu' alt="home" src="icons/home.svg" />
-        </li>
-        <li class='menu'>
-            <a class='menu' onclick="ani('?page=downloads')">Files</a>
-            <img class='menu' alt="downloads" src="icons/download.svg" />
-        </li>
-        <li class='menu'>
-            <a class='menu' onclick="ani('?page=raspberrypi')">RaspberryPi</a>
-            <img class='menu' alt="raspberrypi" src="icons/raspberrypi.svg" />
-        </li>
-        <li class='menu'>
-            <a class='menu' onclick="ani('?page=contact')">Contact</a>
-            <img class='menu' alt="contact" src="icons/contact.svg" />
-        </li>
-        <li class='menuright'>
-            <a class='menuright'>Language</a>
-            <form class='langForm' method="post">
-                <select class='langForm' name="lang" onchange='this.form.submit()'>
-                    <option <?=($_SESSION['lang'] == 'pt_BR')?'selected':''?> value="pt_BR">Portuguese</option>
-                    <option <?=($_SESSION['lang'] == 'en_US')?'selected':''?> value="en_US">English</option>
-                </select>
-            </form>
-        </li>
-    </ul>
-</nav>
+    <nav class='menu' id='menu'>
+        <ul class='menu'>
+            <li class='menu'>
+                <button class='menu' onclick="toggle_dropdown('start_menu')"><?php print(_('Start')) ?></button>
+                <div class="menu_content" id="start_menu">
+                    <a class="menu" href="#"><img class="menu" src="icons/contact.svg" width="30"/><?php print(_('About')) ?></a>
+                </div>
+            </li>
+            <li class='menu right'>
+                <div class="clock"></div>
+            </li>
+            <li class='menu right'>
+                <button class='menu' onclick="toggle_dropdown('language_menu')"><?php print(_('Language')) ?></button>
+                <div class="menu_content right" id="language_menu">
+                    <a href='?lang=pt_BR'><?php print('pt_BR ' . _('(Portuguese)')) ?></a>
+                    <a href='?lang=en_US'><?php print('en_US ' . _('(English)')) ?></a>
+                </div>
+            </li>
+        </ul>
+    </nav>
