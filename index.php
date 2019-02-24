@@ -1,6 +1,5 @@
 <?php
 require_once("config.php");
-// require_once($_SESSION['lang']."/config.php");
 require_once("cute-php-explorer/init.php");
 
 if(session_status() == PHP_SESSION_NONE) {
@@ -26,15 +25,22 @@ if(isset($_POST['lang'])) {
     }
 }
 
+$language_domain = "laraclick";
+setlocale(LC_ALL, $_SESSION['lang'] . '.utf8');
+//putenv('LANGUAGE=' . $_SESSION['lang']);
+bindtextdomain($language_domain, dirname(__FILE__) . "/locale");
+//bind_textdomain_codeset($language_domain, "UTF-8");
+textdomain($language_domain);
+
 if(isset($_GET['page'])) {
-    if(file_exists($_SESSION['lang'].'/'.$_GET['page'].'.php')) {
-        $page = $_SESSION['lang'].'/'.$_GET['page'];
+    if(file_exists($_GET['page'].'.php')) {
+        $page = $_GET['page'];
     } else {
         header("HTTP/1.0 404 Not Found");
-        $page = $_SESSION['lang']."/404";
+        $page = "404";
     }
 } else {
-    $page = $_SESSION['lang'].'/home';
+    $page = 'home';
 }
 ?>
 
@@ -53,12 +59,12 @@ if(isset($_GET['page'])) {
 </head>
 
 <body>
-<?php include_once($_SESSION['lang']."/menu.php"); ?>
+<?php include_once("menu.php"); ?>
 <div id="animation" class="contents">
 <?php include_once($page . ".php") ?>
 </div>
 <footer>
-<?php include_once($_SESSION['lang']."/footer.php"); ?>
+<?php include_once("footer.php") ?>
 </footer>
 </body>
 </html>
