@@ -3,7 +3,9 @@ require_once("config.php");
 // require_once($_SESSION['lang']."/config.php");
 require_once("cute-php-explorer/init.php");
 
-session_start();
+if(session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 $userlang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
