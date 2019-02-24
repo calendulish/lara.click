@@ -12,8 +12,8 @@
             <li class='menu right'>
                 <button class='menu' onclick="toggle_dropdown('language_menu')"><?php print(_('Language')) ?></button>
                 <div class="menu_content right" id="language_menu">
-                    <a href='?lang=pt_BR'><?php print('pt_BR ' . _('(Portuguese)')) ?></a>
-                    <a href='?lang=en_US'><?php print('en_US ' . _('(English)')) ?></a>
+                    <a href='<?= $CuteExplorer->make_query('lang', 'pt_BR', 'post') ?>'><?= 'pt_BR ' . _('(Portuguese)') ?></a>
+                    <a href='<?= $CuteExplorer->make_query('lang', 'en_US', 'post') ?>'><?= 'en_US ' . _('(English)') ?></a>
                 </div>
             </li>
         </ul>
