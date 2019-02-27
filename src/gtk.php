@@ -400,7 +400,7 @@ class Button extends Widget {
         return $this->button . $this->contents . "</button>";
     }
 
-    public function connect($function_, $params_) {
+    public function connect($function_, $params_ = []) {
         $this->function_ = $function_;
         $this->params_ = $params_;
     }
