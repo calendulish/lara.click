@@ -267,8 +267,8 @@ class Label extends Widget {
     }
 }
 
-class TreeView extends widget {
-    protected $treeview = "<ul class='treeview";
+class ListStore extends widget {
+    protected $treeview = "<ul class='liststore";
     
     private $items = [];
     private $title;
