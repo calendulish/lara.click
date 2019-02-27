@@ -304,6 +304,51 @@ class TreeView extends widget {
     }
 }
 
+class TreeStore extends Widget {
+    protected $treeview = "<div class='treestore";
+    protected $template = "'";
+    protected $headers;
+    protected $size;
+
+    private $items = [];
+
+    public function __construct($headers) {
+        $title_template = null;
+        $column_template = null;
+
+        for($i = 0; $i < count($headers); $i++) {
+            $title_template .= "title" . $i . " ";
+            $column_template .= "column" . $i . " ";
+            $this->headers .= "<p style='grid-area: title". $i . "' class='title'>" . $headers[$i] . "</p>\n";
+        }
+
+        $this->template .= $title_template . "' '" . $column_template . "'";
+        $this->size = count($headers);
+    }
+
+    public function get_html() {
+        parent::set_params($this->treeview);
+        $this->treeview .= "' style=\"grid-template-areas:" . $this->template . "\">\n";
+        $this->treeview .= $this->headers;
+
+        for($i = 0; $i < $this->size; $i++) {
+            $this->treeview .= "<div style='grid-area: column" . $i . "'>";
+
+            foreach($this->items as $item) {
+                $this->treeview .= "<p>" . $item[$i] . "</p>\n";
+            }
+
+            $this->treeview .= "</div>";
+        }
+
+        print($this->treeview . "</div>\n");
+    }
+
+    public function add_item($item) {
+        array_push($this->items, $item);
+    }
+}
+
 class Button extends Widget {
     protected $button = "<button class='button";
     
