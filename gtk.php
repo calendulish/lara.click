@@ -54,8 +54,6 @@ class Window extends Widget {
     protected $headerbar = "<a class='headerbar";
     protected $icon = "<a class='thumbnail";
     protected $extra;
-    protected $contents_file;
-    protected $env;
     protected $close_button_callback;
     protected $close_button_params;
 
@@ -137,9 +135,8 @@ class Window extends Widget {
         $this->extra .= $widget->get_html();
     }
     
-    public function set_contents($contents_file, $env = null) {
-        $this->env = $env;
-        $this->contents_file = $contents_file;
+    public function add_raw($contents) {
+        $this->extra .= $contents;
     }
     
     public function show() {
@@ -150,17 +147,6 @@ class Window extends Widget {
     public function show_all() {
         parent::show();
         print($this->extra);
-
-        if(!empty($this->env)) {
-            while($object = current($this->env)) {
-                ${key($this->env)} = $object;
-                next($this->env);
-            }
-        }
-
-        if(!empty($this->contents_file)) {
-            include_once($this->contents_file);
-        }
         print("</div>\n");
     }
 }
