@@ -1,0 +1,141 @@
+/*
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ *
+ * Lara Maia <dev@lara.click> © 2015~2016
+ *
+ */
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #fff;
+    position: static;
+    overflow: hidden;
+}
+h1 {
+    color: #8D758D;
+    font-family: monospace;
+    font-size: 48px;
+    white-space: nowrap;
+}
+.notablet {
+    background: linear-gradient(#ffdfdf, #fff);
+    text-align: center;
+}
+.tablet:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 70px;
+    height: 4px;
+    top: -25px;
+    left: calc(50% - 35px);
+    background: black;
+    box-shadow: 0 0 0 1px #4d4d4d;
+    border-radius: 5px;
+}
+.tablet {
+    background: linear-gradient(#ffdfdf, #fff);
+    text-align: center;
+    border: 16px #404040 solid;
+    border-top-width: 40px;
+    border-bottom-width: 40px;
+    border-radius: 20px;
+}
+.tablet:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 25px;
+    left: calc(50% - 50px);
+    bottom: -31px;
+    background: #404040;
+    box-shadow: 0 0 0 1px #898989;
+    border-radius: 20px;
+}
+.nodesktop {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr) );
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr) );
+    grid-auto-flow: row;
+    min-height: 300px;
+    margin: 30px;
+}
+.desktop:before {
+    content: '';
+    display: block;
+    position: absolute;
+}
+.desktop {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr) );
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr) );
+    grid-auto-flow: column;
+    min-height: 74vh;
+    max-height: 74vh;
+    box-shadow:
+        1px 0 #9b9b9b,
+        -1px 0 #9b9b9b,
+        0 1px 0 #9b9b9b;
+    margin-bottom: -24px;
+    padding: 30px;
+    overflow-x: auto;
+    overflow-y: none;
+}
+@media only screen and (min-width: 1210px) {
+    .desktop {
+        grid-auto-flow: row;
+    }
+}
+.desktop:after {
+    content: '';
+    display: block;
+    position: relative;
+    padding-bottom: 30px;
+}
+.current_directory {
+    width: 84.33%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-shadow: 0 0 1px #FFA0FF;
+}
+h2 {
+    text-decoration: underline;
+}
+table {
+    width: 85%;
+    margin: 0 auto;
+    word-break: break-all;
+}
+pre {
+    white-space: pre-line;
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+}
+/* *** *** *** *** *** *** *** */
+
+div.size {
+    display: none;
+}
+
+/* *** *** *** *** *** *** *** *** */
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding-top: 50px;
+}
+footer p {
+    white-space: pre-line;
+}
+
+/* *** *** *** *** *** *** *** */

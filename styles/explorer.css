@@ -1,0 +1,69 @@
+/*
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ *
+ * Lara Maia <dev@lara.click> © 2015~2016
+ *
+ */
+ 
+.window div.grid {
+    clear: both;
+    display: grid;
+    grid-template-areas:
+        'title date'
+        'sidebar post';
+    grid-template-columns: 1fr 7fr;
+}
+.window div.title {
+    grid-area: title;
+    padding: 3px 10px;
+    background-color: #dfdfdb;
+    box-shadow: 0 0 0 1px black;
+}
+.window div.sidebar {
+    grid-area: sidebar;
+    box-shadow: 1px 0 black;
+    background-color: #ccc;
+    background: url('../icons/tap.svg') no-repeat center;
+    background-size: 50px 50px;
+    overflow: hidden;
+    opacity: 0.5;
+    max-width: 100px;
+    max-height: calc(68vh + 23px);
+    min-height: calc(68vh + 23px);
+}
+@media only screen and (min-width: 1210px) {
+    .window div.sidebar {
+        width: 100%;
+        margin-right: 10px;
+        background: none;
+        max-width: none;
+        opacity: 1;
+    }
+}
+.window div.sidebar:hover {
+    width: 100%;
+    margin-right: 10px;
+    opacity: 1;
+    background: none;
+    max-width: none;
+}
+@media only screen and (max-width: 1210px) {
+    .window div.sidebar:hover ~ div.post {
+        opacity: 0.4;
+    }
+}
+.window div.post {
+    grid-area: post;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: calc(68vh + 3px);
+    min-height: calc(68vh + 3px);
+    padding-bottom: 20px;
+}
+.window p.date {
+    margin: 0;
+    padding: 5px;
+    text-align: right;
+    font-size: 12px;
+}

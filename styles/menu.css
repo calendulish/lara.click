@@ -1,0 +1,93 @@
+/*
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ *
+ * Lara Maia <dev@lara.click> © 2015~2016
+ *
+ */
+
+nav.menu {
+    display: inline-table;
+    width: 100%;
+    background: #806680;
+    text-align: left;
+    margin-top: -4px;
+    box-shadow:
+        1px 0 #9b9b9b,
+        -1px 0 #9b9b9b,
+        0 -1px 0 #9b9b9b;
+}
+.menu button {
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 6px 20px;
+    background: #b28fb2;
+    box-shadow: -3px 0 3px -3px black, 3px 0 3px -3px black;
+    border-radius: 0 0 2px 2px;
+    font-family: inherit;
+    position: relative;
+    z-index: 3;
+    left: 10px;
+    margin-right: 10px;
+}
+.menu button.right {
+    float: right;
+}
+.menu button:hover {
+    background-color: hsl(300, 25%, 68%);
+}
+.menu button.taskbar {
+    position: relative;
+    background-color: #ebebea;
+    color: #555;
+    box-shadow:
+        0 1px 1px #ccc,
+        -3px 0 3px -3px black,
+        3px 0 3px -3px black;
+    z-index: 1;
+}
+.menu button.taskbar:hover {
+    background-color: hsl(60, 8%, 97%);
+}
+.menu img {
+    padding-right: 5px;
+    vertical-align: -6px;
+}
+.menu div:not(.clock) {
+    display: none;
+    position: absolute;
+    background-color: #806680;
+    min-width: 300px;
+    box-shadow: 0 0 0 3px #b28fb2;
+    border-radius: 0 2px 2px 2px;
+    margin: 0 0 0 12px;
+    z-index: 2;
+}
+.menu div.clock {
+    padding: 6px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: -3px 0 3px -3px black, 3px 0 3px -3px black;
+    border-radius: 0 0 2px 2px;
+    background-color: #806680;
+    color: white;
+}
+.menu div.right {
+    float: right;
+    right: 10px;
+}
+.menu a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 2px white;
+}
