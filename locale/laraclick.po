@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-27 15:05-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/403.php:26 src/404.php:35
+msgid "Back"
+msgstr ""
+
+#: src/footer.php:11
+msgid ""
+"The lara.click website is free software: you can redistribute it and/or\n"
+msgstr ""
+
+#: src/footer.php:12
+msgid ""
+"modify it under the terms of the GNU General Public License as published\n"
+msgstr ""
+
+#: src/footer.php:13
+msgid "by the Free Software Foundation, either version 3 of the License, or\n"
+msgstr ""
+
+#: src/footer.php:14
+msgid ""
+"(at your option) any later version.\n"
+"\n"
+msgstr ""
+
+#: src/footer.php:15
+msgid "See the GNU General Public License for more details:\n"
+msgstr ""
+
+#: src/menu.php:5
+msgid "☰"
+msgstr ""
+
+#: src/menu.php:8
+msgid "Home"
+msgstr ""
+
+#: src/menu.php:9 src/menu.php:29
+msgid "(Portuguese)"
+msgstr ""
+
+#: src/menu.php:10 src/menu.php:30
+msgid "(English)"
+msgstr ""
+
+#: src/menu.php:13 src/menu.php:37
+msgid "Tablet Mode On"
+msgstr ""
+
+#: src/menu.php:15 src/menu.php:39
+msgid "Tablet Mode Off"
+msgstr ""
+
+#: src/menu.php:20
+msgid "Start"
+msgstr ""
+
+#: src/menu.php:21
+msgid "About"
+msgstr ""
+
+#: src/menu.php:27
+msgid "Language"
+msgstr ""
+
+#: src/menu.php:33
+msgid "Power"
+msgstr ""
