@@ -56,6 +56,8 @@ class Window extends Widget {
     protected $extra;
     protected $close_button_callback;
     protected $close_button_params;
+    protected $minimize_button_callback;
+    protected $minimize_button_params;
 
     private $title;
     private $icon_image;
@@ -100,23 +102,55 @@ class Window extends Widget {
         }
 
         $close_button = null;
+        $minimize_button = null;
             
         if(!empty($this->close_button_callback)) {
             $close_button = "<button class='close_button' onclick='" . $this->close_button_callback . '(';
 
             foreach($this->close_button_params as $param) {
-                $close_button .= '"' . $param . '",';
+                if(is_array($param)) {
+                    $close_button .= '[';
+                    foreach($param as $single_param) {
+                        $close_button .= '"' . $single_param . '",';
+                    }
+                    $close_button .= '],';
+                } else {
+                    $close_button .= '"' . $param . '",';
+                }
             }
 
             $close_button .= ");'>X</button>";
         }
         
-        return $this->window . $this->headerbar . $close_button . $this->icon;
+        if(!empty($this->minimize_button_callback)) {
+            $minimize_button = "<button class='minimize_button' onclick='" . $this->minimize_button_callback . '(';
+            
+            foreach($this->minimize_button_params as $param) {
+                if(is_array($param)) {
+                    $minimize_button .= '[';
+                    foreach($param as $single_param) {
+                        $minimize_button .= '"' . $single_param . '",';
+                    }
+                    $minimize_button .= '],';
+                } else {
+                    $minimize_button .= '"' . $param . '",';
+                }
+            }
+            
+            $minimize_button .= ");'>_</button>";
+        }
+        
+        return $this->window . $this->headerbar . $minimize_button . $close_button . $this->icon;
     }
 
     public function set_close_button($close_button_callback, $close_button_params) {
         $this->close_button_callback = $close_button_callback;
         $this->close_button_params = $close_button_params;
+    }
+    
+    public function set_minimize_button($minimize_button_callback, $minimize_button_params) {
+        $this->minimize_button_callback = $minimize_button_callback;
+        $this->minimize_button_params = $minimize_button_params;
     }
 
     public function set_title($title) {
