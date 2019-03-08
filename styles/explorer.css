@@ -17,40 +17,37 @@
 .window div.title {
     grid-area: title;
     padding: 3px 10px;
+    margin-right: -10px;
     background-color: #dfdfdb;
     box-shadow: 0 0 0 1px black;
 }
 .window div.sidebar {
     grid-area: sidebar;
-    box-shadow: 1px 0 black;
-    background-color: #ccc;
-    background: url('../icons/tap.svg') no-repeat center;
+    padding-right: 10px;
+    border-right: 3px ridge #ccc;
+    background: url('../icons/tap.svg') no-repeat center #656565;
     background-size: 50px 50px;
     overflow: hidden;
-    opacity: 0.5;
+    opacity: 0.8;
     max-width: 100px;
-    max-height: calc(68vh + 23px);
-    min-height: calc(68vh + 23px);
+    max-height: calc(68vh + 26px);
+    min-height: calc(68vh + 26px);
+}
+.window div.sidebar:hover {
+    position: absolute;
+    background: #656565;
+    max-width: none;
 }
 @media only screen and (min-width: 1210px) {
     .window div.sidebar {
         width: 100%;
-        margin-right: 10px;
-        background: none;
+        background: #848484;
         max-width: none;
         opacity: 1;
     }
-}
-.window div.sidebar:hover {
-    width: 100%;
-    margin-right: 10px;
-    opacity: 1;
-    background: none;
-    max-width: none;
-}
-@media only screen and (max-width: 1210px) {
-    .window div.sidebar:hover ~ div.post {
-        opacity: 0.4;
+    .window div.sidebar:hover {
+    position: relative;
+    background: #848484;
     }
 }
 .window div.post {
