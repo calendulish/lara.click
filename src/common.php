@@ -112,9 +112,9 @@ class AppFromTemplate {
             $this->window->add_raw("<p class='header'>" . str_replace('.post', '', $_GET['post']) . "</p>\n");
 
             if($_SESSION['lang'] == 'en_US') {
-                $custom_date = datefmt_create('en_US'. NULL, NULL);
+                $custom_date = datefmt_create('en_US', NULL, NULL);
                 $custom_date->setPattern('MMMM dd, yyyy');
-                $this->window->add_raw("<p class='date'>" . $custom_date(filemtime($content_file)) . "</p>\n");
+                $this->window->add_raw("<p class='date'>" . datefmt_format($custom_date, filemtime($content_file)) . "</p>\n");
             } else {
                 $custom_date = datefmt_create('pt_BR', NULL, NULL);
                 $custom_date->setPattern("dd 'de' MMMM, yyyy");
