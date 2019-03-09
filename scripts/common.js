@@ -13,5 +13,5 @@ function update_query(remove = [], add = [], value = []) {
 }
 
 function home() {
-    window.location.href = window.location.pathname;
+    update_query(['program', 'page']);
 }
