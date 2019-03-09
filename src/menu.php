@@ -2,10 +2,10 @@
 print("<nav class='menu'>");
 
 if(isset($_SESSION['mobile']) && $_SESSION['mobile'] == "on") {
-    $start_menu = new Menu('start', _('☰'));
+    $start_menu = new Menu('start', '☰');
     $start_menu->set_align('right');
 
-    $start_menu->add_item(null, _('Home'), parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+    $start_menu->add_item(null, _('Desktop'), $CuteExplorer->make_query('', '', ['program', 'page']));
     $start_menu->add_item(null, 'pt_BR ' . _('(Portuguese)'), $CuteExplorer->make_query('lang', 'pt_BR'));
     $start_menu->add_item(null, 'en_US ' . _('(English)'), $CuteExplorer->make_query('lang', 'en_US'));
 
@@ -18,7 +18,8 @@ if(isset($_SESSION['mobile']) && $_SESSION['mobile'] == "on") {
     $start_menu->show_all();
 } else {
     $start_menu = new Menu('start', _('Start'));
-    $start_menu->add_item('icons/contact.svg', _('About'), '#');
+    $start_menu->add_item('icons/home.svg', _('Desktop'), $CuteExplorer->make_query('', '', ['program', 'page']));
+    $start_menu->add_item('icons/contact.svg', _('About'), $CuteExplorer->make_query('page', 'about', ['program']));
 
     $start_menu->show_all();
 
