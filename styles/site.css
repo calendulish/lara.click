@@ -22,7 +22,7 @@ h1 {
     background: linear-gradient(#ffdfdf, #fff);
     text-align: center;
 }
-.tablet:before {
+.tablet::before {
     content: '';
     display: block;
     position: relative;
@@ -42,7 +42,7 @@ h1 {
     border-bottom-width: 40px;
     border-radius: 20px;
 }
-.tablet:after {
+.tablet::after {
     content: '';
     display: block;
     position: relative;
@@ -63,7 +63,7 @@ h1 {
     min-height: 300px;
     margin: 30px;
 }
-.desktop:before {
+.desktop::before {
     content: '';
     display: block;
     position: absolute;
@@ -90,12 +90,22 @@ h1 {
         grid-auto-flow: row;
     }
 }
-.desktop:after {
+.desktop::after {
     content: '';
     display: block;
     position: relative;
     padding-bottom: 30px;
 }
+.post {
+    overflow: hidden;
+}
+.tablet .post {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: calc(68vh + 3px);
+    min-height: calc(68vh + 3px);
+}
+
 .current_directory {
     width: 84.33%;
     margin: 0 auto;
@@ -114,16 +124,67 @@ table {
     margin: 0 auto;
     word-break: break-all;
 }
-pre {
+.paper {
+    position: relative;
+    max-width: 800px;
+    min-height: 1000px;
     white-space: pre-line;
-    margin: 20px;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 30px;
     background: white;
-    background-image: linear-gradient(#e4e6ff 0.1em, transparent 0.1em);
-    background-size: 100% 1.438em;
     border: 1px solid #ccc;
-    color: #3b2f92;
+    line-height: 1.5em;
+    color: #000F55;
     font-family: cursive;
+    z-index: 1;
+    overflow: none;
+}
+.lined::before {
+    content: '';
+    background: white;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 4.5em;
+    z-index: -1;
+}
+.lined {
+    padding: 0.4em 10px 4.5em 10px;
+    background: linear-gradient(#e4e6ff 0.1em, white 0.1em);
+    background-size: 100% 1.5em;
+}
+.lined::after {
+    content: '';
+    background: white;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 4.5em;
+    z-index: -1;
+}
+@media only screen and (max-width: 1210px) {
+    .paper {
+        margin-right: 13px;
+        margin-left: 13px;
+    }
+}
+@media only screen and (min-width: 1210px) {
+    .paper {
+        padding: 0.4em 20px 4.5em 83px;
+    }
+    .paper .margin::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        top: 0;
+        left: 70px;
+        bottom: 0;
+        border: 1px solid;
+        border-color: transparent #ffd7d7;
+        z-index: 2;
+    }
 }
 /* *** *** *** *** *** *** *** */
 

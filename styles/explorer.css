@@ -14,13 +14,6 @@
         'sidebar post';
     grid-template-columns: 1fr 7fr;
 }
-.window div.title {
-    grid-area: title;
-    padding: 3px 10px;
-    margin-right: -10px;
-    background-color: #dfdfdb;
-    box-shadow: 0 0 0 1px black;
-}
 .window div.sidebar {
     grid-area: sidebar;
     padding-right: 10px;
@@ -29,9 +22,17 @@
     background-size: 50px 50px;
     overflow: hidden;
     opacity: 0.8;
-    max-width: 100px;
+    max-width: 90px;
     max-height: calc(68vh + 26px);
     min-height: calc(68vh + 26px);
+    z-index: 3;
+}
+div.sidebar div.title {
+    grid-area: title;
+    padding: 3px 10px;
+    margin-right: -10px;
+    background-color: #dfdfdb;
+    box-shadow: 0 0 0 1px black;
 }
 .window div.sidebar:hover {
     position: absolute;
@@ -56,11 +57,28 @@
     overflow-x: hidden;
     max-height: calc(68vh + 3px);
     min-height: calc(68vh + 3px);
-    padding-bottom: 20px;
+    padding: 10px 0;
 }
-.window p.date {
+div.post .header {
+    top: 2em;
+    left: 20px;
     margin: 0;
-    padding: 5px;
-    text-align: right;
-    font-size: 12px;
+    font-size: 25px;
+    position: absolute;
+}
+@media only screen and (min-width: 1210px) {
+    div.post .header {
+        left: 90px;
+    }
+}
+div.post p.date {
+    margin: 0;
+    top: 3.9em;
+    right: 20px;
+    font-size: 14px;
+    position: absolute;
+}
+div.post img {
+    max-width: 100%;
+    margin-top: 5px;
 }

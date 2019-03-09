@@ -64,7 +64,7 @@ nav.menu {
     box-shadow: 0 0 0 3px #b28fb2;
     border-radius: 0 2px 2px 2px;
     margin: 0 0 0 12px;
-    z-index: 2;
+    z-index: 10;
 }
 .menu div.clock {
     padding: 6px;
