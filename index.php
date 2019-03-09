@@ -49,7 +49,7 @@ if(isset($_GET['program'])) {
 
 require_once("cute-php-explorer/init.php");
 
-if(isset($_GET['page'])) {
+if(isset($_GET['page']) && !isset($_GET['program'])) {
     if(file_exists('src/' . $_GET['page'].'.php')) {
         $page = 'src/' . $_GET['page'];
     } else {
@@ -94,21 +94,25 @@ if($_SESSION['overlay'] == 'on') {
     print("<body>\n");
     print("<div class='tablet'>\n");
     include_once('src/menu.php');
-    if(!isset($_GET['program'])) {
+    if(!isset($_GET['program']) && !isset($_GET['page'])) {
         print("<div class='desktop'>\n");
     }
 } else {
     print("<body style='margin: 0; overflow: auto;'>\n");
     print("<div class='notablet'>\n");
     include_once('src/menu.php');
-    if(!isset($_GET['program'])) {
+    if(!isset($_GET['program']) && !isset($_GET['page'])) {
         print("<div class='nodesktop'>\n");
     }
 }
 
 include_once($page . '.php');
 
-print("</div></div>\n");
+print("</div>\n");
+
+if(!isset($_GET['program']) && !isset($_GET['page'])) {
+    print("</div>\n");
+}
 
 if($_SESSION['overlay'] == 'off') {
     print("<footer>\n");
